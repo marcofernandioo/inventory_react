@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import Login from './screen/Login';
+import Login from './screen/Login';
+import NameList from './screen/NameList';
+import ContactUs from './screen/contactForm';
 
-function App() {
+
+// import './App.css';
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div> 
+        <h2>Hello there, {props.name}</h2>
+        <h3>Your name is {props.secName}</h3>
+        <Login />
+        <br></br>
+        {/* <ContactUs /> */}
+        <br></br>
+        <hr></hr>
+        <br></br>
+        <NameList />
+      </div>
   );
 }
+
 
 export default App;
